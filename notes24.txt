@@ -1,0 +1,60 @@
+java -jar selenium-server-4.1.4.jar -role hub
+---------------------------------------------------------------
+https://docs.google.com/document/d/1hP-sUPAyZ-SGBOUKDEv7N-EDyoCKcz72/edit?usp=sharing&ouid=107989245803090857619&rtpof=true&sd=true
+------------------------------------------------------------------------------------------------------------
+Dwebdriver.chrome.driver=C:\Selenium-Jar\Driver\chromedriver.exe
+------------------------------------------------------------------------------------------
+java -Dwebdriver.chrome.driver=C:\Selenium-Jar\Driver\chromedriver.exe -jar selenium-server-standalone-3.141.59.jar -role node -hub http://192.168.197.1:4444/grid/register/
+-----------------------------------------------------------------------------------------
+java -Dwebdriver.chrome.driver=C:\Selenium-Jar\Driver\chromedriver.exe -Dwebdriver.gecko.driver=C:\Selenium-Jar\Driver\geckodriver.exe -jar selenium-server-standalone-3.141.59.jar -role node -hub http://192.168.197.1:4444/grid/register/
+
+-----------------------------------------------------------------------------------------
+url = "http://demo.automationtesting.in/Index.html";
+			// browse the url
+			driver.get(url);
+			// click on skip sign in button
+			driver.findElement(By.id("btn2")).click();
+			// give first name
+			driver.findElement(By.xpath("//input[@placeholder='First Name']")).sendKeys("Sai");
+			// give the last name
+			driver.findElement(By.xpath("//input[@placeholder='Last Name']")).sendKeys("Kiran");
+			// give some address
+			driver.findElement(By.xpath("//textarea[@ng-model='Adress']")).sendKeys("Pune");
+			// enter email
+			driver.findElement(By.xpath("//input[@type='email']")).sendKeys("sai@gmail.com");
+			// radio
+			driver.findElement(By.xpath("//input[@type='radio' and @value='Male']")).click();
+			// checkbox
+			driver.findElement(By.id("checkbox1")).click();
+			driver.findElement(By.id("checkbox2")).click();
+			driver.findElement(By.id("checkbox3")).click();
+=========--------------------------------------------------------------------------------------------------------
+https://drive.google.com/file/d/1GsCKCySY7Adn4TfPVt_EKN_6HRTxAn9B/view?usp=sharing
+From Sai Kiran to Everyone 04:09 PM
+0-----------------------------------------------------------------------------------------
+public WebDriver driver;
+	public String verificationError = "";
+	public String url = "";
+
+	@Before
+	public void setUp() {
+		driver = new HtmlUnitDriver();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
+	}
+===========================================================================================================
+@Test
+	public void formFilling() {
+		try {
+			url = "http://demo.automationtesting.in/Index.html";
+			// browse the url
+			driver.get(url);
+			// click on skip sign in button
+			driver.findElement(By.id("btn2")).click();
+			// give first name
+			driver.findElement(By.xpath("//input[@placeholder='First Name']")).sendKeys("Sai");
+			// give the last name
+			driver.findElement(By.xpath("//input[@placeholder='Last Name']")).sendKeys("Kiran");
+			// give some address
+			driver.findElement(By.xpath("//textarea[@ng-model='Adress']")).sendKeys("Pune");
+-------------------------------------------------------------------------------------------------------------------
